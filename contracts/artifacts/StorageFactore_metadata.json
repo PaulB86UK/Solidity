@@ -6,10 +6,84 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_favoriteNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "addPerson",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "createSimpleStorageContract",
 				"outputs": [],
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "nameToFavoriteNumber",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "people",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "favoriteNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "retrieve",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -67,6 +141,19 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_favoriteNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "store",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -82,7 +169,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/StorageFactory.sol": "StorageFactore"
+			"contracts/Inheritance_StorageFactory.sol": "StorageFactore"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -96,18 +183,18 @@
 		"remappings": []
 	},
 	"sources": {
+		"contracts/Inheritance_StorageFactory.sol": {
+			"keccak256": "0xbc47eaedf67041a2771c57c5f54bdabf40f7db8a8432fe32d83772d7c0ed0628",
+			"urls": [
+				"bzz-raw://258f8a816f458d64fb97e7c3af1d40a637d0f68cb01d3c16ef7932d92bb8d5f1",
+				"dweb:/ipfs/QmUiEtuCT8mm1V13MUkkeqVrToJMVm7x6fZ8ivPc5jDy7i"
+			]
+		},
 		"contracts/SimpleStorage.sol": {
 			"keccak256": "0xd5cd19b6af4f5f7be983b94942df58d32995f10aa83ef43408531700f09ad3dc",
 			"urls": [
 				"bzz-raw://65fa59b6fba53299d5bf3735516de5eeac822cc1d8fa90d3a7b8a0ec3a4202c1",
 				"dweb:/ipfs/QmUuEDhoAKwYYQ2L1i9UGfG5MiPReWxPumNfbKEg4wF18Q"
-			]
-		},
-		"contracts/StorageFactory.sol": {
-			"keccak256": "0x31446ee4308f960f14fbc4ef9fd6c90e0890d706e7418c07e9dd89e2618c806a",
-			"urls": [
-				"bzz-raw://ecb7ca51c43186462c03254a8b7ac35ddf68952287a54085eb4c3ad97b7fb26b",
-				"dweb:/ipfs/QmfGqtKSh1WGbEcKyrDVHWK3msWY8KBES8MZ3xJcSzUv6v"
 			]
 		}
 	},
