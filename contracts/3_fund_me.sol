@@ -7,7 +7,7 @@ contract FundMe {
     using SafeMathChainlink for uint256;
 
     mapping(address => uint256) public addressToAmountFunded;
-
+    address[] public funders;
     //to let the owner be created inmediately
     address public owner;
     constructor() public {
@@ -18,10 +18,12 @@ contract FundMe {
 
     function fund() public payable  {
     // $50
-    uint256 minimiumUSD = 50 * 10 ** 18;
-    //1 gwei < 50
-    require(getConversionRate(msg.value) >= minimiumUSD, "You need to spend more ETH!");  
-    addressToAmountFunded[msg.sender] += msg.value;
+        uint256 minimiumUSD = 50 * 10 ** 18;
+        //1 gwei < 50
+        require(getConversionRate(msg.value) >= minimiumUSD, "You need to spend more ETH!");  
+        addressToAmountFunded[msg.sender] += msg.value;
+        funders.push(msg.sender);
+        
     // ETH TO USD CONVERSION RATE
         
     }
@@ -43,10 +45,19 @@ contract FundMe {
         return ethAMountinUsd;
     }
 
-
-    function withdraw() payable public {
-        //require msg.sender = owner
+    modifier onlyOwner {
         require(msg.sender == owner);
+        _;
+    }
+    function withdraw() payable onlyOwner public {
+        //require msg.sender = owner
         msg.sender.transfer(address(this).balance);
+        for (uint256 funderIndex=0; funderIndex<funders.length; funderIndex++) {
+            address funder = funders[funderIndex];
+            addressToAmountFunded[funder] = 0; //reset the values
+        }
+        //after reseting all we need to clean the array
+        funders = new address[](0);
+
     }
 } 
