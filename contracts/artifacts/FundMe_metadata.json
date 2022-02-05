@@ -112,12 +112,20 @@
 				"dweb:/ipfs/QmQvwFk1SBaLMm4pmZCz7UEhfaXM8kUWu5VG71VFFuMxjF"
 			]
 		},
-		"contracts/3_fund_me.sol": {
-			"keccak256": "0xd35f985e247c43fc0d6857dc8a07d565a927304b7c9dd3070b42d4df5bf18f3d",
+		"@chainlink/contracts/src/v0.6/vendor/SafeMathChainlink.sol": {
+			"keccak256": "0x105f5e9491f3d0bbdd4f1c7627eb839d69b944bfd803028a01cc083597692c1f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://f0d61135eddc34c95f2ea9148fa7962ec17cb531cacf575c812c594fef7aa7e0",
-				"dweb:/ipfs/QmePXL3Tey5jreMGDTPwUXh2ujgsq26cwtfa8BNe5PjVbx"
+				"bzz-raw://ec45a2748a024a947a921183d4102d5e206808588501d85ddc4f5668a009bc73",
+				"dweb:/ipfs/QmRNAMpq7LdWFnJ7wWKGbUuAcURaGSS42PMxtQ4vjrHmp9"
+			]
+		},
+		"contracts/3_fund_me.sol": {
+			"keccak256": "0x9884c8aa1574cd64e306c21445787beea2fb1c425ea007aa8be40bfb0bd10684",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://123f78af6d256e17f2ba82e189de26031e0e6556bcda45d8257c87c5ff6a223c",
+				"dweb:/ipfs/QmdAeCgQGmUAKyNe5Xx11FZmBFAzd9MGCfqvCCE9T1B1WF"
 			]
 		}
 	},
